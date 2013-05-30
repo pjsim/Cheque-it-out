@@ -3,8 +3,7 @@ class CreateCheques < ActiveRecord::Migration
     create_table :cheques do |t|
       t.string :drawer
       t.string :payee
-      t.datetime :date
-      t.integer :amount
+      t.decimal :amount
 
       t.timestamps
     end

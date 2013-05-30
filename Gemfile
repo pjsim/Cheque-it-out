@@ -14,3 +14,4 @@ gem 'jquery-rails'
 
 gem "twitter-bootstrap-rails"
 gem "numbers_and_words"
+gem 'currency-in-words'

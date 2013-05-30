@@ -1,3 +1,3 @@
 class Cheque < ActiveRecord::Base
-  attr_accessible :amount, :date, :drawer, :payee
+  attr_accessible :amount, :drawer, :payee
 end

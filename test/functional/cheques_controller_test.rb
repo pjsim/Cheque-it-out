@@ -18,7 +18,7 @@ class ChequesControllerTest < ActionController::TestCase
 
   test "should create cheque" do
     assert_difference('Cheque.count') do
-      post :create, cheque: { amount: @cheque.amount, date: @cheque.date, drawer: @cheque.drawer, payee: @cheque.payee }
+      post :create, cheque: { amount: @cheque.amount, drawer: @cheque.drawer, payee: @cheque.payee }
     end
 
     assert_redirected_to cheque_path(assigns(:cheque))
@@ -35,7 +35,7 @@ class ChequesControllerTest < ActionController::TestCase
   end
 
   test "should update cheque" do
-    put :update, id: @cheque, cheque: { amount: @cheque.amount, date: @cheque.date, drawer: @cheque.drawer, payee: @cheque.payee }
+    put :update, id: @cheque, cheque: { amount: @cheque.amount, drawer: @cheque.drawer, payee: @cheque.payee }
     assert_redirected_to cheque_path(assigns(:cheque))
   end
 

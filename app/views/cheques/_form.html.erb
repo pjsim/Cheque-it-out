@@ -13,15 +13,16 @@
 
   <div class="field">
     <%= f.label :drawer %><br />
-    <%= f.text_field :drawer %>
+    <%= f.text_field :drawer, :placeholder => 'Mr. Smith' %>
   </div>
   <div class="field">
     <%= f.label :payee %><br />
-    <%= f.text_field :payee %>
+    <%= f.text_field :payee, :placeholder => 'Mrs. Smith' %>
   </div>
   <div class="field">
     <%= f.label :amount %><br />
-    <%= f.text_field :amount %>
+    <strong style="font-size:25px">$</strong>
+    <%= f.text_field :amount, :placeholder => '100.00' %>
   </div>
 
     <%= f.submit "Save cheque", class: "btn btn-primary" %>

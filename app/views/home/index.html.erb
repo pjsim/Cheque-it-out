@@ -1,12 +1,17 @@
 <h3>Welcome to Cheque-it-out</h3>
 <h4>The brand new app for chequing out cheques! </h4>
 <br>
-<h4>See your entire cheque list <%= link_to "here", cheques_path, :class => 'name', :style => 'color:#597543' %> or create a <%= link_to "new cheque", new_cheque_path, :class => 'name', :style => 'color:#597543' %></h4>
+<h5>See your entire cheque list <%= link_to "here", cheques_path, :class => 'name', :style => 'color:#597543' %> or create a <%= link_to "new cheque", new_cheque_path, :class => 'name', :style => 'color:#597543' %></h5>
 <br>
-<h5>
+
+
 	<p>This app is developed in rails and bootstrap, hosted on heroku and uses bcarrere's <a href="https://github.com/bcarrere/currency-in-words", target = "blank_new", style ="color:#597543">currency-in-words gem</a> to get the decimal prices properly converted into words.</p>
 
 	<p>To use the site you can use the navbar to go to the cheque list page where you can then view all your cheques, edit/delete/create cheques and view only cheques by sender or recipient (or both).</p>
 
+	<p>A cheque is created with just a name for the drawer (sender) and a name for the payee (recipient) as well as the monetary amount. For the date I was considering having a datetime field where the user can choose their own date with it set to today's date by default but for simplicity I decided that the date of the cheque would automatically be the date the cheque form is submitted. </p>
+
 	<p>The site isn't fully responsive and I'm not all that good with CSS layouts so the text on the cheque show page may be a bit off but if your screen size is large enough it should hopefully work. There is a text-only version of the cheque at the bottom of the page just in case it doesn't.</p>
-</h5>
+
+	<p>More info can be found on my README.doc up on github LINK! and any feedback would be much appreciated.</p>
+

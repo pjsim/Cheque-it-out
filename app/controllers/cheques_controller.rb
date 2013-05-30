@@ -4,14 +4,18 @@ class ChequesController < ApplicationController
   def index
     if params[:drawer]
       @cheques = Cheque.where(:drawer => params[:drawer])
+
     elsif params[:payee]
       @cheques = Cheque.where(:payee => params[:payee])
+
     elsif params[:drawer_payee]
       @cheques_drawer = Cheque.where(:drawer => params[:drawer_payee])
       @cheques_payee = Cheque.where(:payee => params[:drawer_payee])
       @cheques = @cheques_drawer + @cheques_payee
+
     else
       @cheques = Cheque.all
+      
     end
 
     respond_to do |format|

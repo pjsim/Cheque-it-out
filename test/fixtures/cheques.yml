@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  drawer: 
+  payee: 
+  date: 2013-05-30 09:34:17
+  amount: 1
+
+two:
+  drawer: 
+  payee: 
+  date: 2013-05-30 09:34:17
+  amount: 1

@@ -1,3 +1,6 @@
 <h1>Welcome to Cheque-it-out</h1>
 
-<h4>Then I must do cheque sorting</h4>
+<h4>The brand new app for chequing out cheques! </h4>
+<h4>See your cheque list <%= link_to "here", cheques_path, :class => 'name', :style => 'color:#597543' %> or create a <%= link_to "new cheque", new_cheque_path, :class => 'name', :style => 'color:#597543' %></h4>
+
+<h5>This app uses <a href="https://github.com/bcarrere/currency-in-words", target = "blank_new", style ="color:#597543">bcarrere's currency-in-words gem</a> to get the decimal prices properly converted into words. </h5>

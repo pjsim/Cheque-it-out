@@ -18,11 +18,11 @@
 	<% end %>
 	<% @amount_as_words = number_to_currency_in_words(@cheque.amount, connector: ' and ') %>
 	<% @word_count = @amount_as_words.length %>
-	<% if @word_count > 30 %>
+	<% if @word_count > 35 %>
 		<h4 style="position:absolute; bottom:280px; left:220px">
 			<%= number_to_currency_in_words(@cheque.amount, connector: ' and ') %>
 		</h4>
-	<% elsif @word_count > 20 && @word_count < 30 %>
+	<% elsif @word_count > 20 && @word_count < 35 %>
 		<h3 style="position:absolute; bottom:280px; left:250px">
 			<%= number_to_currency_in_words(@cheque.amount, connector: ' and ') %>
 		</h3>
@@ -43,7 +43,7 @@
 			<%= 'dated at ' + @cheque.created_at.strftime("%m/%d/%Y") %></h5>
 	</div>
 	<div class="span4">
-		<h3 align="center"><%= link_to 'Edit', edit_cheque_path(@cheque) %> |
-		<%= link_to 'Back', cheques_path %></h3>
+		<h3 align="center"><%= link_to 'Edit', edit_cheque_path(@cheque), :class => 'btn btn-success' %> |
+		<%= link_to 'Back', cheques_path, :class => 'btn btn-warning' %></h3>
 	</div>
 </div>

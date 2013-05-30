@@ -54,7 +54,7 @@
       <price><%= number_to_currency(cheque.amount) %></price>
     </td>
     <td>
-      <%= link_to 'Show All', cheques_path, :class => 'btn btn-primary', :style => 'float:right' if params[:drawer] || params[:payee] %>
+      <%= link_to 'Show All', cheques_path, :class => 'btn btn-primary', :style => 'float:right' if params[:drawer] || params[:payee] || params[:drawer_payee] %>
     </td>
     <td>
       <%= link_to 'Show', cheque, :class => 'btn btn-info', :style => 'float:right' %>

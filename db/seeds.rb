@@ -17,4 +17,4 @@ Cheque.create(drawer: 'Billy Wilkinson', payee: 'Paul Sutherland', amount: 1001.
 Cheque.create(drawer: 'Mr Smith', payee: 'Mrs Smith', amount: 2.00)
 Cheque.create(drawer: 'Frank Jameson', payee: 'Sarah Smithinson', amount: 1111.11)
 Cheque.create(drawer: 'Alex Dayle', payee: 'Sarah Smithinson', amount: 2031.01)
-Cheque.create(drawer: 'Billy Wilkinson', payee: 'Frank Jameson', amount: 2031.01)
+Cheque.create(drawer: 'Billy Wilkinson', payee: 'Frank Jameson', amount: 2200.18)

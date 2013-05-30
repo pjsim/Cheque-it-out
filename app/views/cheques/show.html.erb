@@ -1,34 +1,34 @@
 <div align="center">
-	<div class="container">
 	<%= image_tag "blank_cheque.jpg", :style => "min-width:1000px; position:relative" %>
-	<h2 style="position:absolute; bottom:180px; left:700px;"><%= @cheque.drawer %></h2>
-	<h2 style="position:absolute; bottom:330px; left:320px"><%= @cheque.payee %></h2>
-	<h3 style="position:absolute; bottom:395px; left:930px">
+	<div class="container" style = "position:relative">
+	<h2 style="position:absolute; bottom:80px; left:620px;"><%= @cheque.drawer %></h2>
+	<h2 style="position:absolute; bottom:230px; left:300px"><%= @cheque.payee %></h2>
+	<h3 style="position:absolute; bottom:295px; left:850px">
 		<%= @cheque.created_at.strftime("%m/%d/%Y") %>
 	</h3>
 	<% @amount_as_words = number_with_precision @cheque.amount, :precision => 2 %>
 	<% @word_count = @amount_as_words.length %>
 	<% if @word_count > 7 %>
-	<h3 style="position:absolute; bottom:325px; left:960px">
+	<h3 style="position:absolute; bottom:225px; left:880px">
 		<%= number_with_precision @cheque.amount, :precision => 2 %>
 	</h3>
 	<% else %>
-	<h2 style="position:absolute; bottom:325px; left:970px">
+	<h2 style="position:absolute; bottom:225px; left:880px">
 		<%= number_with_precision @cheque.amount, :precision => 2 %>
 	</h2>
 	<% end %>
 	<% @amount_as_words = number_to_currency_in_words(@cheque.amount, connector: ' and ') %>
 	<% @word_count = @amount_as_words.length %>
 	<% if @word_count > 35 %>
-		<h4 style="position:absolute; bottom:280px; left:220px">
+		<h4 style="position:absolute; bottom:180px; left:130px">
 			<%= number_to_currency_in_words(@cheque.amount, connector: ' and ') %>
 		</h4>
 	<% elsif @word_count > 20 && @word_count < 35 %>
-		<h3 style="position:absolute; bottom:280px; left:250px">
+		<h3 style="position:absolute; bottom:180px; left:250px">
 			<%= number_to_currency_in_words(@cheque.amount, connector: ' and ') %>
 		</h3>
 	<% else %>
-		<h2 style="position:absolute; bottom:280px; left:250px">
+		<h2 style="position:absolute; bottom:180px; left:250px">
 			<%= number_to_currency_in_words(@cheque.amount, connector: ' and ') %>
 		</h2>
 	<% end %>

@@ -37,7 +37,7 @@
 
 <hr>
 
-<div class="row">
+<div class="row-fluid">
 	<div class="span8">
 		<h5><%= @cheque.drawer + '\'s cheque to ' + @cheque.payee %>
 			<%= 'to the amount of ' + number_to_currency_in_words(@cheque.amount, connector: ' and ') %>

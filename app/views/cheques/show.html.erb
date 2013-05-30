@@ -1,5 +1,6 @@
 <div align="center">
-	<%= image_tag "blank_cheque.jpg", :style => "width:1000px; position:relative" %>
+	<div class="container">
+	<%= image_tag "blank_cheque.jpg", :style => "min-width:1000px; position:relative" %>
 	<h2 style="position:absolute; bottom:180px; left:700px;"><%= @cheque.drawer %></h2>
 	<h2 style="position:absolute; bottom:330px; left:320px"><%= @cheque.payee %></h2>
 	<h3 style="position:absolute; bottom:395px; left:930px">
@@ -31,6 +32,7 @@
 			<%= number_to_currency_in_words(@cheque.amount, connector: ' and ') %>
 		</h2>
 	<% end %>
+	</div>
 </div>
 
 <hr>

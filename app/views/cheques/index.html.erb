@@ -1,3 +1,5 @@
+<!--The following code determines what headline and buttons to show based on the parameters in the address bar-->
+
 <% if !params[:drawer] && !params[:payee] && !params[:drawer_payee] %>
   <h3>All Cheques</h3>
 
@@ -27,6 +29,8 @@
 <br>
 <br>
 
+<!-- Table of cheque values. -->
+
 <table class="table">
   <tr>
     <th>Drawer</th>
@@ -41,6 +45,7 @@
 
 <% @cheques.each do |cheque| %>
   <tr>
+    <!-- clicking on a name adds their name to the address parameters -->
     <td>
       <%= link_to cheque.drawer, cheques_path(:drawer => cheque.drawer), :class => 'name' %>
     </td>
@@ -51,9 +56,11 @@
       <%= cheque.created_at.strftime("%m/%d/%Y") %>
     </td>
     <td>
+      <!-- integer amount shown as proper currency value-->
       <price><%= number_to_currency(cheque.amount) %></price>
     </td>
     <td>
+      <!-- if a name has been selected then give the option to show all cheques again -->
       <%= link_to 'Show All', cheques_path, :class => 'btn btn-primary', :style => 'float:right' if params[:drawer] || params[:payee] || params[:drawer_payee] %>
     </td>
     <td>

@@ -1,8 +1,7 @@
 class ChequesController < ApplicationController
-  # GET /cheques
-  # GET /cheques.json
-  def index
 
+  # Cheques shown are based on if a selected name is a drawer or payer (or both).
+  def index
     if params[:drawer]
       @cheques = Cheque.where(:drawer => params[:drawer])
     elsif params[:payee]
